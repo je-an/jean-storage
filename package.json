@@ -1,6 +1,6 @@
 {
   "name": "jean-storage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides functionality to interact and store values in browsers storage",
   "main": "Storage.js",
   "scripts": {
