@@ -9,7 +9,7 @@ require(["path/to/Storage"], function(Storage){
     // Set storage config
     Storage.configure(Storage.storageType.SESSION);
     // Write an object to storage
-    Storage.writeElement("key", { id. "123"});
+    Storage.writeElement("key", { id: "123"});
     // Read an object from storage
     var element = Storage.readElement("key");
     // Read all objects from storage
