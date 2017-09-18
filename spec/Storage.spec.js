@@ -1,7 +1,7 @@
 // jscs:disable
 // jshint ignore:start
 define([
-    "src/Storage",
+    "Storage",
     "StorageNotDefinedError"
 ], function (Storage, StorageNotDefinedError) {
     describe('Storage.spec.js', function () {
