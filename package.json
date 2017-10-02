@@ -1,8 +1,8 @@
 {
   "name": "jean-storage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Provides functionality to interact and store values in browsers storage",
-  "main": "Storage.js",
+  "main": "jean-storage.js",
   "scripts": {
     "test": "open spec/spec-runner.html in browser"
   },
@@ -14,9 +14,9 @@
   "author": "Jeremias Andris",
   "license": "MIT",
   "dependencies": {
-    "almond": "^0.3.3",
-    "jean-core-type": "0.0.6",
-    "jean-type-check": "0.0.5"
+    "jean-amd": "0.0.5",
+    "jean-core-type": "0.0.8",
+    "jean-type-check": "0.0.6"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,9 @@
 ({
     baseUrl: '.',
-    out: 'dist/Storage.js',
-    optimize: 'none',
-    include: ["node_modules/almond/almond", "src/Storage"],
+    out: 'dist/jean-storage.js',
+    optimize: 'uglify2',
+    name: "node_modules/jean-amd/dist/jean-amd",
+    include: ["src/Storage"],
     wrap: {
         start: 
         "(function (root, factory) { \n" +
