@@ -1,23 +1,30 @@
 ## Description
 
-Provides functionality to interact and store values in browsers storage
+Provides functionality to interact and store values in browsers storage.
+
+## Support
+Supports AMD eco system. If there is no loader, Storage is registered as a browser variable.
 
 ## Code Example
-
+- Use it as browser variable
+```js
+ // Set storage config
+Storage.configure(Storage.storageType.SESSION);
+// Write an object to storage
+Storage.writeElement("key", { id: "123"});
+// Read an object from storage
+var element = Storage.readElement("key");
+// Read all objects from storage
+var elements = Storage.readAllElements();
+// Remove an element
+Storage.removeElement("key");
+// Remove all elements 
+Storage.removeAllElements();
+```
+- Use it with require.js
 ```js
 require(["path/to/Storage"], function(Storage){
-    // Set storage config
-    Storage.configure(Storage.storageType.SESSION);
-    // Write an object to storage
-    Storage.writeElement("key", { id: "123"});
-    // Read an object from storage
-    var element = Storage.readElement("key");
-    // Read all objects from storage
-    var elements = Storage.readAllElements();
-    // Remove an element
-    Storage.removeElement("key");
-    // Remove all elements 
-    Storage.removeAllElements();
+   // Work with Storage
 });
 ```
 
@@ -74,7 +81,7 @@ Read an element identified by the passed key
 Read all elements from the storage
 
 **Returns**
-- `Any[] | null`, - List of all elements within the storage or null
+- `Any[] | null` - List of all elements within the storage or null
                         if there are no elements in storage
 
 
@@ -86,7 +93,7 @@ Remove an element by its key from storage
 - **key**: `String` - Identifies the object, which shall be removed
 
 **Returns**
--  `Boolean`- True if element is removed, false otherwise
+-  `Boolean` - True if element is removed, false otherwise
 
 
 ### Storage.removeAllElements() 
