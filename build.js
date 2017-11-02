@@ -22,6 +22,6 @@
     },
      paths:{
         TypeCheck: "node_modules/jean-type-check/src/TypeCheck",
-        StorageNotDefinedError:"node_modules/jean-core-type/src/error/StorageNotDefinedError"
+        StorageNotDefinedError:"src/StorageNotDefinedError"
     }
 })

@@ -247,8 +247,8 @@ define([
                 }
             });
         });
-        describe("Storage.removeAllElements", function(){
-            it("Removes all objects from session storage", function(){
+        describe("Storage.removeAllElements", function () {
+            it("Removes all objects from session storage", function () {
                 Storage.configure(Storage.storageType.SESSION);
                 for (var i = 1; i < 11; i++) {
                     Storage.writeElement(i.toString(), { id: i });
@@ -256,7 +256,7 @@ define([
                 expect(Storage.removeAllElements()).toBe(true);
                 expect(Storage.readAllElements()).toBeNull();
             });
-            it("Removes all objects from local storage", function(){
+            it("Removes all objects from local storage", function () {
                 Storage.configure(Storage.storageType.LOCAL);
                 for (var i = 1; i < 11; i++) {
                     Storage.writeElement(i.toString(), { id: i });
@@ -264,12 +264,22 @@ define([
                 expect(Storage.removeAllElements()).toBe(true);
                 expect(Storage.readAllElements()).toBeNull();
             });
-            it("Throws exception, if all elements shall be removed but no configuration is set", function(){
+            it("Throws StorageNotDefinedError, if all elements shall be removed but no configuration is set", function () {
                 try {
                     Storage.removeAllElements();
                 } catch (e) {
                     expect(e instanceof StorageNotDefinedError).toBe(true);
                 }
+            });
+        });
+        describe("StorageNotDefinedError", function () {
+            var ie = {};
+            beforeEach(function () {
+                ie = new StorageNotDefinedError();
+            });
+            it("Has all necessary member", function () {
+                var numberOfMembers = 2;
+                expect(Object.keys(ie).length).toEqual(numberOfMembers);
             });
         });
     });
